@@ -40,45 +40,45 @@ public class ZendeskService {
     private static final String ESCAPED_LINE_SEPARATOR = "\\n";
     private static final String ESCAPE_ER = "\\";
     private static final String HTML_BR = "<br/>";
-    @Value("#{envPC['zendesk.ticket']}")
+    @Value("${envPC['zendesk.ticket']?:'ZendeskTicket'}")
     public String PETICION_ZENDESK= "";
 
-    @Value("#{envPC['zendesk.token']}")
+    @Value("${envPC['zendesk.token']?:'ZendeskToken'}")
     public String TOKEN_ZENDESK= "";
 
-    @Value("#{envPC['zendesk.url']}")
+    @Value("${envPC['zendesk.url']?:'https://www.zendesk.com'}")
     public String URL_ZENDESK= "";
 
-    @Value("#{envPC['zendesk.user']}")
+    @Value("${envPC['zendesk.user']?:'ZendeskUser'}")
     public String ZENDESK_USER= "";
 
-    @Value("#{envPC['tarjetas.getDatos']}")
+    @Value("${envPC['tarjetas.getDatos']?:'Default datos tajeta'}")
     public String TARJETAS_GETDATOS = "";
 
-    @Value("#{envPC['cliente.getDatos']}")
+    @Value("${envPC['cliente.getDatos']?:'Default datos cliente'}")
     public String CLIENTE_GETDATOS = "";
 
-    @Value("#{envPC['zendesk.error.mail.funcionalidad']}")
+    @Value("${envPC['zendesk.error.mail.funcionalidad']?:'ZendeskMailError'}")
     public String ZENDESK_ERROR_MAIL_FUNCIONALIDAD = "";
 
-    @Value("#{envPC['zendesk.error.destinatario']}")
+    @Value("${envPC['zendesk.error.destinatario']?:'ZendeskReveiverError'}")
     public String ZENDESK_ERROR_DESTINATARIO = "";
 
     private SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
 
     /** The portalclientes web ejb remote. */
-    @Autowired
+    //@Autowired
     // @Qualifier("portalclientesWebEJB")
     private PortalClientesWebEJBRemote portalclientesWebEJBRemote;
 
     /** The rest template. */
-    @Autowired
-    @Qualifier("restTemplateUTF8")
+    //@Autowired
+   // @Qualifier("restTemplateUTF8")
     private RestTemplate restTemplate;
 
-    @Autowired
-    @Qualifier( "emailService" )
+    //@Autowired
+   // @Qualifier( "emailService" )
     MensajeriaService emailService;
 
     /**
