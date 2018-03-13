@@ -3,3 +3,7 @@
    - Añadido sportalclientesweb-1.19.0.jar en src/main/resources y añadido al pom.xml como  	   	dependencia local interna.
    - Ejecutado commando "mvn clean install" para actualizar dependencias maven. Con esto se resuelven
      los conflictos del proyecto.
+     
+2) - Incluidos dependecias spring boot al pom.xml.
+   - Reestructurado proyecto en servicios, controladores y modelos (estrucutra SpringBoot).
+   - Creado clase ZendeskApplication para iniciar api y ZendeskController para crear las peticiones 	 	 REST en el navegador.
