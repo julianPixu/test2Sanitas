@@ -9,7 +9,9 @@ com\mycorp\models\ValueCode.class
 com\mycorp\Zendesk.class
 com\mycorp\models\DatosCliente.class
 com\mycorp\utils\ZendeskException.class
+com\mycorp\controllers\MensajeriaController.class
 com\mycorp\models\Ticket.class
+com\mycorp\services\MensajeriaServiceImpl.class
 com\mycorp\models\Poliza.class
 com\mycorp\Zendesk$ZendeskAsyncCompletionHandler.class
 com\mycorp\models\DatosEnvioMail.class

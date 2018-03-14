@@ -14,5 +14,8 @@
 	    * http://localhost:8080/enviarCorreoErr -> avisa al usuario que el correo NO se envío con éxito
 	    * http://localhost:8080/alta/*nombre* -> avisa al agente *nombre* no pudo dar de alta a un usaurio
 	    
-   - No se ha podido testar de forma correcta ZendeskService.altaUsuario() por tiempo
+   - No se ha podido testar de forma correcta ZendeskService.altaUsuario() por desconocimiento de 		funcionamiento interno.
+   
+4) - Añadido Mockito a dependecias de pom.xml
+   - Incluido test para comprobar que se incluyen un fichero adjunto al CorreoElectronico.
 	    
